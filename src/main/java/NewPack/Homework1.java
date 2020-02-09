@@ -9,6 +9,7 @@ public class Homework1 {
         int[] arr = new int[100];
         Scanner sc = new Scanner(System.in);
         Random r = new Random();
+
         int i=0;
         int sec_num = r.nextInt(100);
         System.out.println("Let the game begin!");
