@@ -5,18 +5,9 @@ import java.util.Scanner;
 import java.util.Random;
 
 public class Homework1 {
-    public static void main(String[] args) {
-        int[] arr = new int[100];
-        Scanner sc = new Scanner(System.in);
-        Random r = new Random();
-
-        int i=0;
-        int sec_num = r.nextInt(100);
-        System.out.println("Let the game begin!");
-        String username = sc.next();
-        int user_num = -1;
-
-        while(sec_num != user_num){
+    private static void FindSecretNumber(int[] arr, Scanner sc, int i, int sec_num, String username) {
+        int user_num;
+        do{
             user_num = sc.nextInt();
             arr[i] = user_num;
             i++;
@@ -27,14 +18,32 @@ public class Homework1 {
             else if(sec_num > user_num){
                 System.out.println("Your number is too small. Please, try again.");
             }
-            else if(sec_num < user_num){
+            else {
                 System.out.println("Your number is too big. Please, try again.");
             }
-        }
-        Arrays.sort(arr);
+        }while(user_num != sec_num);
+    }
+
+    private static void ShowUserInputs(int[] arr) {
         System.out.print("Your numbers: ");
-        for(int j=0;j<i;j++){
-            System.out.print(arr[j] + " ");
+        for (int value : arr) {
+            if (value != 0)
+                System.out.print(value + " ");
         }
+    }
+
+    public static void main(String[] args) {
+        int[] arr = new int[100];
+        Scanner sc = new Scanner(System.in);
+        Random r = new Random();
+        int i=0;
+        int sec_num = r.nextInt(100);
+        System.out.println("Let the game begin!");
+        System.out.println("Please enter your name: ");
+        String username = sc.next();
+        int user_num;
+        FindSecretNumber(arr, sc, i, sec_num, username);
+        Arrays.sort(arr);
+        ShowUserInputs(arr);
     }
 }
