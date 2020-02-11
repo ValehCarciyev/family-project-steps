@@ -8,6 +8,7 @@ public class Homework1 {
     private static void FindSecretNumber(int[] arr, Scanner sc, int i, int sec_num, String username) {
         int user_num;
         do{
+            System.out.print("Enter your number: ");
             user_num = sc.nextInt();
             arr[i] = user_num;
             i++;
@@ -39,7 +40,7 @@ public class Homework1 {
         int i=0;
         int sec_num = r.nextInt(100);
         System.out.println("Let the game begin!");
-        System.out.println("Please enter your name: ");
+        System.out.print("Please enter your name: ");
         String username = sc.next();
         int user_num;
         FindSecretNumber(arr, sc, i, sec_num, username);

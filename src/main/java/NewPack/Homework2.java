@@ -33,7 +33,9 @@ public class Homework2 {
         int user_col;
         try {
             do {
+                System.out.print("Please, enter row: ");
                 user_row = sc.nextInt();
+                System.out.print("Please, enter column: ");
                 user_col = sc.nextInt();
                 if (user_col == col && user_row == row && user_col != 0 && user_row != 0) {
                     System.out.println("You have won!");
