@@ -22,8 +22,8 @@ public class Homework3 {
 
     private static void ShowTasks(String[][] schedule, String day) {
         for (int i = 0; i < 7; i++) {
-            if (!day.equals("exit")) {
-                if (schedule[i][0].equals(day)) {
+            if (!day.equalsIgnoreCase("exit")) {
+                if (schedule[i][0].equalsIgnoreCase(day.trim())) {
                     if(schedule[i][1].isEmpty()) {
                         System.out.println("Your have no any tasks for " + day);
                     }
@@ -40,11 +40,11 @@ public class Homework3 {
     }
 
     private static void changeTasksOfAnyDay(Scanner sc, String[][] schedule, String[] chg_arr, String day) {
-        if (chg_arr[0].equals("change") || chg_arr[0].equals("reschedule")) {
+        if (chg_arr[0].equalsIgnoreCase("change") || chg_arr[0].equalsIgnoreCase("reschedule")) {
             System.out.println("Please, input new tasks for " + chg_arr[1]);
             String new_task = sc.nextLine();
             for (int i = 0; i < 7; i++) {
-                if (schedule[i][0].equals(chg_arr[1])) {
+                if (schedule[i][0].equalsIgnoreCase(chg_arr[1])) {
                     schedule[i][1] = new_task;
                     break;
                 }
@@ -63,10 +63,12 @@ public class Homework3 {
         String[] chg_arr;
         //Input
         String day = "";
-        while (!day.equals("exit")) {
+        while (!day.equalsIgnoreCase("exit")) {
             System.out.print("Please input the day of the week: ");
             day = sc.nextLine();
+
             chg_arr = day.split(" ");
+
             //Change tasks of any day
             changeTasksOfAnyDay(sc, schedule, chg_arr, day);
         }

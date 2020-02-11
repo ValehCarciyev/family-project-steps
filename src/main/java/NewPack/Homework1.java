@@ -21,7 +21,7 @@ public class Homework1 {
             else {
                 System.out.println("Your number is too big. Please, try again.");
             }
-        }while(user_num != sec_num);
+        }while(true);
     }
 
     private static void ShowUserInputs(int[] arr) {

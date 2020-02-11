@@ -31,23 +31,21 @@ public class Homework2 {
     private static void ShootTarget(String[][] matrix, Scanner sc, int row, int col) {
         int user_row;
         int user_col;
-        do{
-            user_row = sc.nextInt();
-            user_col = sc.nextInt();
-            try {
+        try {
+            do {
+                user_row = sc.nextInt();
+                user_col = sc.nextInt();
                 if (user_col == col && user_row == row && user_col != 0 && user_row != 0) {
                     System.out.println("You have won!");
                     matrix[user_row][user_col - 1] = "X";
                 } else {
                     matrix[user_row][user_col - 1] = "*";
                 }
-            }
-            catch (Exception e){
-                System.out.println("Please try again!");
-
-            }
-            PrintMatrix(matrix); //Print Changed Matrix.
-        }while(user_col != col || user_row != row);
+                PrintMatrix(matrix); //Print Changed Matrix.
+            } while (user_col != col || user_row != row);
+        } catch (Exception e) {
+            System.out.println("Please try again!");
+        }
     }
 
     public static void main(String[] args) {
