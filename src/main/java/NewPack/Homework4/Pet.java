@@ -1,6 +1,6 @@
 package NewPack.Homework4;
 
-import java.sql.SQLOutput;
+import java.util.Arrays;
 
 public class Pet {
     String species;
@@ -11,26 +11,30 @@ public class Pet {
     public void eat(){
         System.out.println("I am eating!");
     }
-    public void respond(String name){
-        System.out.println("Hello owner, I am " + name + ". I miss you!");
+    public void respond(){
+        System.out.println("Hello owner, I am " + nickname + ". I miss you!");
     }
     public void foul(){
         System.out.println("I need to cover it up");
     }
-    public Pet(String spec, String name){
-        species = spec;
-        nickname = name;
+    public Pet(String species, String nickname){
+        this.species = species;
+        this.nickname = nickname;
     }
-    public Pet(String spec, String name, int age, short trick, String[] habit){
-        species = spec;
-        nickname = name;
+    public Pet(String species, String nickname, int age, short trickLevel, String[] habits){
+        this.species = species;
+        this.nickname = nickname;
         this.age = age;
-        trickLevel = trick;
-        for (String s : habits = habit) {
-
-        }
+        this.trickLevel = trickLevel;
+        this.habits = habits;
     }
     public Pet(){
 
+    }
+    public String tostring(){
+        String string = "";
+        string += species + "{nickname='" + nickname + "', age=" + age + ", trickLevel=" + trickLevel
+                + ", habits=" + Arrays.toString(habits) + "}";
+        return string;
     }
 }

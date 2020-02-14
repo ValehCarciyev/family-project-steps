@@ -22,20 +22,35 @@ public class Human {
             System.out.print("almost not sly");
         }
     }
-    public Human(String name, String sname, int year, short iq, Human fath, Human moth){
+    public Human(String name, String surname, int year, short iq, Human father, Human mother){
         this.name = name;
-        surname = sname;
+        this.surname = surname;
         this.year = year;
         this.iq = iq;
-        father = fath;
-        mother = moth;
+        this.father = father;
+        this.mother = mother;
     }
-    public Human(String name, String sname, int year){
+    public Human(String name, String surname, int year, Human father, Human mother){
         this.name = name;
-        surname = sname;
+        this.surname = surname;
+        this.year = year;
+        this.father = father;
+        this.mother = mother;
+    }
+    public Human(String name, String surname, int year){
+        this.name = name;
+        this.surname = surname;
         this.year = year;
     }
     public Human() {
 
+    }
+    public String tostring(){
+        String string = "";
+        string += "Human{name='" + name + "', surname='" + surname + "', year=" + year
+                + ", iq=" + iq + ", mother=" + mother.name + " " + mother.surname
+                + ", father=" + father.name + " " + father.surname + ", pet="
+                + pet.tostring() +"}";
+        return string;
     }
 }
