@@ -8,9 +8,7 @@ public class Human {
     Pet pet = new Pet();
     Human father;
     Human mother;
-
     String[][] schedule = new String[7][1];
-
     public void GreetPet(){
         System.out.println("Hello, " + pet.nickname);
     }
@@ -49,8 +47,6 @@ public class Human {
         this.year = year;
     }
     public Human() {
-
-
     }
     public String tostring(){
         String string = "";
