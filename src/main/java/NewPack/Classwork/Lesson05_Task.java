@@ -5,7 +5,6 @@ import java.util.Random;
 
 public class Lesson05_Task {
     public static void main(String[] args) {
-
         int m = 10, n = 10;
         int[] odd = new int[m];
         int[] even = new int[n];
