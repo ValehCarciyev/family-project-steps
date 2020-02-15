@@ -13,7 +13,7 @@ public class Human {
         System.out.println("Hello, " + pet.nickname);
     }
     public void DescribePet(){
-        System.out.print("I have a " + pet.species + ", he is " + pet.age + " years old, he is");
+        System.out.printf("I have a %s, he is %d years old, he is", pet.species, pet.age);
         if(pet.trickLevel >= 50){
             System.out.print(" very sly");
         }
@@ -50,10 +50,8 @@ public class Human {
     }
     public String tostring(){
         String string = "";
-        string += "Human{name='" + name + "', surname='" + surname + "', year=" + year
-                + ", iq=" + iq + ", mother=" + mother.name + " " + mother.surname
-                + ", father=" + father.name + " " + father.surname + ", pet="
-                + pet.tostring() +"}";
+        string += String.format("Human{name='%s', surname='%s', year=%d, iq=%s, mother=%s %s, father=%s %s, pet=%s}"
+                , name, surname, year, iq, mother.name, mother.surname, father.name, father.surname, pet.tostring());
         return string;
     }
 }

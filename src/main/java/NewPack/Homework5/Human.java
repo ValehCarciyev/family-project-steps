@@ -117,8 +117,7 @@ public class Human {
     }
     public String tostring(){
         String string = "";
-        string += "Human{name='" + name + "', surname='" + surname + "', year=" + year
-                + ", iq=" + iq + ", schedule=" + Arrays.toString(schedule) + "}";
+        string += String.format("Human{name='%s', surname='%s', year=%d, iq=%s, schedule=%s}", name, surname, year, iq, Arrays.toString(schedule));
         return string;
     }
 

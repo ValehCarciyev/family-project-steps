@@ -72,12 +72,5 @@ public class Pet {
     public Pet(){
 
     }
-    public String tostring(){
-        String string = "";
-        string += species + "{nickname='" + nickname + "', age=" + age + ", trickLevel=" + trickLevel
-                + ", habits=" + Arrays.toString(habits) + "}";
-        return string;
-    }
-
 }
 

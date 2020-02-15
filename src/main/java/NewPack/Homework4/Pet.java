@@ -33,8 +33,8 @@ public class Pet {
     }
     public String tostring(){
         String string = "";
-        string += species + "{nickname='" + nickname + "', age=" + age + ", trickLevel=" + trickLevel
-                + ", habits=" + Arrays.toString(habits) + "}";
+        string += String.format("%s{nickname='%s', age=%d, trickLevel=%s, habits=%s}"
+                , species, nickname, age, trickLevel, Arrays.toString(habits));
         return string;
     }
 }
