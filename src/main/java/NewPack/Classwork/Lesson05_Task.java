@@ -13,10 +13,7 @@ public class Lesson05_Task {
         for(int i = 0; i < m; i++){
             int o = r.nextInt(100);
             odd[i] = (o * 2) + 1;
-        }
-        for (int i = 0; i < n; i++) {
-            int e = r.nextInt(100);
-            even[i] = e * 2;
+            even[i] = o * 2;
         }
         int a = 0, b = 0;
         for(int i = 0; i < m + n; i ++){
