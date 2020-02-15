@@ -6,8 +6,9 @@ public class Human {
     int year;
     short iq;
     Pet pet = new Pet();
-    Human mother = new Human();
-    Human father = new Human();
+    Human father;
+    Human mother;
+
     String[][] schedule = new String[7][1];
 
     public void GreetPet(){
@@ -22,11 +23,16 @@ public class Human {
             System.out.print("almost not sly");
         }
     }
-    public Human(String name, String surname, int year, short iq, Human father, Human mother){
+    public Human(String name, String surname, int year, short iq, Human father, Human mother, Pet pet){
         this.name = name;
         this.surname = surname;
         this.year = year;
         this.iq = iq;
+        this.pet.nickname = pet.nickname;
+        this.pet.species = pet.species;
+        this.pet.age = pet.age;
+        this.pet.trickLevel = pet.trickLevel;
+        this.pet.habits = pet.habits;
         this.father = father;
         this.mother = mother;
     }
@@ -35,7 +41,7 @@ public class Human {
         this.surname = surname;
         this.year = year;
         this.father = father;
-        this.mother = mother;
+        this.mother= mother;
     }
     public Human(String name, String surname, int year){
         this.name = name;
@@ -43,6 +49,7 @@ public class Human {
         this.year = year;
     }
     public Human() {
+
 
     }
     public String tostring(){
