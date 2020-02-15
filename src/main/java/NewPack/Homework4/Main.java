@@ -1,28 +1,39 @@
 package NewPack.Homework4;
 
 public class Main {
+    private static void CallAllMethods(Human child) {
+        child.GreetPet();
+        child.DescribePet();
+        System.out.println(child.tostring());
+        child.pet.eat();
+        child.pet.respond();
+        child.pet.foul();
+        System.out.println(child.pet.tostring());
+    }
     public static void main(String[] args) {
-        Human human = new Human();
-        human.surname = "Garayev";
-        human.name = "Elbrus";
-        human.year = 2000;
-        human.iq = 100;
-        Human human2 = new Human();
-        human2.name ="ekber";
-        human2.surname ="ekberli";
-        Human human1 = new Human();
-        human1.name = "Firuze";
-        human1.surname = "Garayeva";
+        Human child = new Human();
+        Human father = new Human();
+        Human mother = new Human();
+        child.surname = "Garayev";
+        child.name = "Elbrus";
+        child.year = 2000;
+        child.iq = 100;
 
-        human.pet.species = "dog";
-        human.pet.nickname = "Beethoven";
-        human.pet.age = 5;
-        human.pet.trickLevel = 55;
-        human.pet.habits = new String[]{"eat", "drink", "sleep"};
+        father.name ="Akber";
+        father.surname ="Garayev";
 
-        human.father = human2;
-        human.mother = human1;
+        mother.name = "Firuze";
+        mother.surname = "Garayeva";
 
-        System.out.println(human.tostring());
+        child.father = father;
+        child.mother = mother;
+
+        child.pet.species = "dog";
+        child.pet.nickname = "Beethoven";
+        child.pet.age = 5;
+        child.pet.trickLevel = 55;
+        child.pet.habits = new String[]{"eat", "drink", "sleep"};
+
+        CallAllMethods(child);
     }
 }
