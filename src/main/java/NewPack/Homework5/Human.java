@@ -11,6 +11,19 @@ public class Human {
     private Human father;
     private Human mother;
     private String[][] schedule;
+    private Family family = new Family();
+
+    public Human() {
+
+    }
+
+    public Family getFamily() {
+        return family;
+    }
+
+    public void setFamily(Family family) {
+        this.family = family;
+    }
 
     public void setName(String name) {
         this.name = name;
@@ -79,7 +92,7 @@ public class Human {
     public void GreetPet(){
         System.out.println("Hello, " + pet.getNickname());
     }
-    public void DescribePet(){
+    /*public void DescribePet(){
         System.out.print("I have a " + pet.getNickname() + ", he is " + pet.getAge() + " years old, he is");
         if(pet.getTrickLevel() >= 50){
             System.out.print(" very sly");
@@ -87,7 +100,7 @@ public class Human {
         else{
             System.out.print("almost not sly");
         }
-    }
+    }*/
     public Human(String name, String surname, int year, short iq, Human father, Human mother){
         this.name = name;
         this.surname = surname;
@@ -101,7 +114,7 @@ public class Human {
         this.father = father;
         this.mother = mother;
     }
-    public Human(String name, String surname, int year, Human father, Human mother){
+    /*public Human(String name, String surname, int year, Human father, Human mother){
         this.name = name;
         this.surname = surname;
         this.year = year;
@@ -114,10 +127,11 @@ public class Human {
         this.year = year;
     }
     public Human() {
-    }
+    }*/
     public String tostring(){
         String string = "";
-        string += String.format("Human{name='%s', surname='%s', year=%d, iq=%s, schedule=%s}", name, surname, year, iq, Arrays.toString(schedule));
+        string += String.format("Human{name='%s', surname='%s', year=%d, iq=%s, schedule=%s}"
+                , name, surname, year, iq, Arrays.deepToString(schedule));
         return string;
     }
 

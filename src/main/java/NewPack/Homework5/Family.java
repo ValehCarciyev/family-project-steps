@@ -1,17 +1,18 @@
 package NewPack.Homework5;
 
+import java.util.ArrayList;
+
 public class Family {
     public static void main(String[] args) {
         Human mother = new Human();
         Human father = new Human();
         Human children = new Human();
         Pet pet = new Pet();
-        Family family = new Family();
         children.setName("Elbrus");
         children.setSurname("Garayev");
         children.setYear(2000);
         children.setIq((short)100);
-        children.setSchedule(new String[][]{{"Monday", "Thursday"},{"Go to sport", "Go to course"}});
+        children.setSchedule(new String[][]{{"Monday", "Go to sport"},{"Thursday", "Go to course"}});
 
         mother.setName("Firuze");
         mother.setSurname("Garayeva");
@@ -29,9 +30,17 @@ public class Family {
         children.setMother(mother);
         children.setPet(pet);
 
+
+
         System.out.println(children.tostring());
     }
-    public void deleteChild(Human child){
+    public void addChild(Human child){
+        ArrayList<Human> childs = new ArrayList<>();
+        childs.add(child);
+        child.setFamily(this);
+            }
+    public boolean deleteChild(Human child){
 
+        return true;
     }
 }
