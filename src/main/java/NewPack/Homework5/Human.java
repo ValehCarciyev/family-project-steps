@@ -101,18 +101,15 @@ public class Human {
             System.out.print("almost not sly");
         }
     }*/
-    public Human(String name, String surname, int year, short iq, Human father, Human mother){
+    public Human(String name, String surname, int year, short iq, String[][] schedule, Human father, Human mother,Pet pet){
         this.name = name;
         this.surname = surname;
         this.year = year;
         this.iq = iq;
-        this.pet.setNickname(pet.getNickname());
-        this.pet.setSpecies(pet.getSpecies());
-        this.pet.setAge(pet.getAge());
-        this.pet.setTrickLevel(pet.getTrickLevel());
-        this.pet.setHabits(pet.getHabits());
+        this.pet = pet;
         this.father = father;
         this.mother = mother;
+        this.schedule = schedule;
     }
     /*public Human(String name, String surname, int year, Human father, Human mother){
         this.name = name;

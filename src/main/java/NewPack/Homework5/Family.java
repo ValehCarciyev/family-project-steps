@@ -4,43 +4,40 @@ import java.util.ArrayList;
 
 public class Family {
     public static void main(String[] args) {
+        ArrayList<Human> childs = new ArrayList<>();
         Human mother = new Human();
+        mother.setName("Elizabeth");
+        mother.setSurname("Nielson");
         Human father = new Human();
-        Human children = new Human();
-        Pet pet = new Pet();
-        children.setName("Elbrus");
-        children.setSurname("Garayev");
-        children.setYear(2000);
-        children.setIq((short)100);
-        children.setSchedule(new String[][]{{"Monday", "Go to sport"},{"Thursday", "Go to course"}});
+        father.setName("James");
+        father.setSurname("Nielson");
 
-        mother.setName("Firuze");
-        mother.setSurname("Garayeva");
+        Pet pet = new Pet("dog","Beethoven",5, (short) 55,
+                new String[]{"eat", "drink", "sleep"});
 
-        father.setName("Akber");
-        father.setSurname("Garayev");
-
-        pet.setSpecies("dog");
-        pet.setNickname("Beethoven");
-        pet.setAge(5);
-        pet.setTrickLevel((short)70);
-        pet.setHabits(new String[]{"eat", "drink", "sleep"});
+        Human children = new Human("Fred","Nielson",2000, (short) 100,
+                new String[][]{{"Monday", "Go to sport"},{"Thursday",
+                        "Go to course"}},father,mother,pet);
 
         children.setFather(father);
         children.setMother(mother);
         children.setPet(pet);
 
-
-
+        addChild(children,childs);
         System.out.println(children.tostring());
+        deleteChild(children, childs);
+        System.out.println(childs.toString());
     }
-    public void addChild(Human child){
-        ArrayList<Human> childs = new ArrayList<>();
+    public static void addChild(Human child, ArrayList<Human> childs){
         childs.add(child);
-        child.setFamily(this);
+        child.setFamily(child.getFamily());
             }
-    public boolean deleteChild(Human child){
-
-        return true;
+    public static boolean deleteChild(Human child, ArrayList<Human> childs){
+        if(childs.indexOf(child)!=-1){
+            childs.remove(child);
+            return true;
+        }
+        else
+            return false;
     }
 }
