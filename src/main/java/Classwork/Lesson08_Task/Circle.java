@@ -5,7 +5,6 @@ public class Circle extends Figures{
     int radius;
     @Override
     public int area() {
-
         return radius + (center.x * center.y);
     }
 }
