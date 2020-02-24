@@ -25,8 +25,11 @@ public class Family {
 
         addChild(children,childs);
         System.out.println(children.tostring());
-        deleteChild(children, childs);
-        System.out.println(childs.toString());
+
+        if(deleteChild(children, childs)){
+            System.out.println("Child was deleted!");
+        }
+
     }
     public static void addChild(Human child, ArrayList<Human> childs){
         childs.add(child);
