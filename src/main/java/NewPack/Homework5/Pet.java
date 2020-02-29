@@ -57,7 +57,12 @@ public class Pet {
     public String[] getHabits() {
         return habits;
     }
-
+    public String tostring(){
+        String string = "";
+        string += String.format("%s{nickname='%s', age=%d, trickLevel=%s, habits=%s}"
+                , species, nickname, age, trickLevel, Arrays.toString(habits));
+        return string;
+    }
     public Pet(String species, String nickname){
         this.species = species;
         this.nickname = nickname;

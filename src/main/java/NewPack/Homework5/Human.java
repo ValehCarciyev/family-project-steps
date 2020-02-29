@@ -1,6 +1,7 @@
 package NewPack.Homework5;
 
 import java.util.Arrays;
+import java.util.Objects;
 
 public class Human {
     private String name;
@@ -11,11 +12,21 @@ public class Human {
     private Human father;
     private Human mother;
     private String[][] schedule;
-    private Family family = new Family();
+    private Family family;
 
-    public Human() {
-
+    public Human(String name, String surname) {
+        this.name = name;
+        this.surname = surname;
     }
+
+    public Human(String name, String surname, int year, short iq, String[][] schedule) {
+        this.name = name;
+        this.surname = surname;
+        this.year = year;
+        this.iq = iq;
+        this.schedule = schedule;
+    }
+
 
     public Family getFamily() {
         return family;
@@ -130,6 +141,29 @@ public class Human {
         string += String.format("Human{name='%s', surname='%s', year=%d, iq=%s, schedule=%s}"
                 , name, surname, year, iq, Arrays.deepToString(schedule));
         return string;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Human human = (Human) o;
+        return year == human.year &&
+                iq == human.iq &&
+                name.equals(human.name) &&
+                surname.equals(human.surname) &&
+                pet.equals(human.pet) &&
+                father.equals(human.father) &&
+                mother.equals(human.mother) &&
+                Arrays.equals(schedule, human.schedule) &&
+                family.equals(human.family);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = Objects.hash(name, surname, year, iq, pet, father, mother, family);
+        result = 31 * result + Arrays.hashCode(schedule);
+        return result;
     }
 
 }
