@@ -89,4 +89,9 @@ public class Family {
         newChildren[newChildren.length-1] = child;
         this.setChildren(newChildren);
     }
+
+    public int countFamily(){
+
+        return children.length + 2;
+    }
 }
