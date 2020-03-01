@@ -1,6 +1,5 @@
-package NewPack;
+package NewPack.homework2;
 
-import java.util.InputMismatchException;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -64,3 +63,4 @@ public class Homework2 {
         ShootTarget(matrix, sc, row, col);
     }
 }
+

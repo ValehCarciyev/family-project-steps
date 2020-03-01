@@ -9,18 +9,7 @@ public class Human {
     Human father;
     Human mother;
     String[][] schedule = new String[7][1];
-    public void GreetPet(){
-        System.out.println("Hello, " + pet.nickname);
-    }
-    public void DescribePet(){
-        System.out.printf("I have a %s, he is %d years old, he is", pet.species, pet.age);
-        if(pet.trickLevel >= 50){
-            System.out.print(" very sly");
-        }
-        else{
-            System.out.print("almost not sly");
-        }
-    }
+
     public Human(String name, String surname, int year, short iq, Human father, Human mother, Pet pet){
         this.name = name;
         this.surname = surname;
@@ -48,10 +37,23 @@ public class Human {
     }
     public Human() {
     }
+
+    public void GreetPet(){
+        System.out.println("Hello, " + pet.nickname);
+    }
+    public void DescribePet(){
+        System.out.printf("I have a %s, he is %d years old, he is", pet.species, pet.age);
+        if(pet.trickLevel >= 50){
+            System.out.print(" very sly\n");
+        }
+        else{
+            System.out.print("almost not sly\n");
+        }
+    }
+
     public String tostring(){
-        String string = "";
-        string += String.format("Human{name='%s', surname='%s', year=%d, iq=%s, mother=%s %s, father=%s %s, pet=%s}"
+
+        return String.format("Human{name='%s', surname='%s', year=%d, iq=%s, mother=%s %s, father=%s %s, pet=%s}"
                 , name, surname, year, iq, mother.name, mother.surname, father.name, father.surname, pet.tostring());
-        return string;
     }
 }

@@ -14,11 +14,6 @@ public class Human {
     private String[][] schedule;
     private Family family;
 
-    public Human(String name, String surname) {
-        this.name = name;
-        this.surname = surname;
-    }
-
     public Human(String name, String surname, int year, short iq, String[][] schedule) {
         this.name = name;
         this.surname = surname;
@@ -26,7 +21,6 @@ public class Human {
         this.iq = iq;
         this.schedule = schedule;
     }
-
 
     public Family getFamily() {
         return family;
@@ -103,44 +97,10 @@ public class Human {
     public void GreetPet(){
         System.out.println("Hello, " + pet.getNickname());
     }
-    /*public void DescribePet(){
-        System.out.print("I have a " + pet.getNickname() + ", he is " + pet.getAge() + " years old, he is");
-        if(pet.getTrickLevel() >= 50){
-            System.out.print(" very sly");
-        }
-        else{
-            System.out.print("almost not sly");
-        }
-    }*/
-    public Human(String name, String surname, int year, short iq, String[][] schedule, Human father, Human mother,Pet pet){
-        this.name = name;
-        this.surname = surname;
-        this.year = year;
-        this.iq = iq;
-        this.pet = pet;
-        this.father = father;
-        this.mother = mother;
-        this.schedule = schedule;
-    }
-    /*public Human(String name, String surname, int year, Human father, Human mother){
-        this.name = name;
-        this.surname = surname;
-        this.year = year;
-        this.father = father;
-        this.mother= mother;
-    }
-    public Human(String name, String surname, int year){
-        this.name = name;
-        this.surname = surname;
-        this.year = year;
-    }
-    public Human() {
-    }*/
+
     public String tostring(){
-        String string = "";
-        string += String.format("Human{name='%s', surname='%s', year=%d, iq=%s, schedule=%s}"
+        return String.format("Human{name='%s', surname='%s', year=%d, iq=%s, schedule=%s}"
                 , name, surname, year, iq, Arrays.deepToString(schedule));
-        return string;
     }
 
     @Override

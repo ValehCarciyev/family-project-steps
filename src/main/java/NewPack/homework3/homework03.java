@@ -1,8 +1,8 @@
-package NewPack;
+package NewPack.homework3;
 
 import java.util.Scanner;
 
-public class Homework3 {
+public class homework03 {
     private static void giveValueToArray(String[][] schedule) {
         schedule[0][0] = "Sunday";
         schedule[2][0] = "Tuesday";
