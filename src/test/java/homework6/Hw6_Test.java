@@ -126,7 +126,6 @@ public class Hw6_Test {
     @Test
     public void test7() {
         FillValue();
-
         int expected = 4;
         int actual = family.countFamily();
         assertEquals(expected, actual);
@@ -135,6 +134,16 @@ public class Hw6_Test {
     @Test
     public void test8() {
         int expected = 0;
+        int actual = family.countFamily();
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void test9() {
+        int expected = family.countFamily() + 1;
+        Human daught = new Human("Eliza","Nielsen",
+                2019,(short) 100,new String[][]{{"Monday", "Drink coffe"},{"Thursday","Sleep"}});
+        family.addChild(daught);
         int actual = family.countFamily();
         assertEquals(expected, actual);
     }
