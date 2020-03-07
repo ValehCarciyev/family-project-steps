@@ -68,12 +68,7 @@ public class Pet {
     }
     @Override
     public void finalize() {
-        System.out.println("Removing " + this.toString());
-        try {
-            super.finalize();
-        } catch (Throwable throwable) {
-            throwable.printStackTrace();
-        }
+        System.out.println("Pet in the finalizer");
     }
     @Override
     public boolean equals(Object o) {

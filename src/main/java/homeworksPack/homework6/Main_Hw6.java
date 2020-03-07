@@ -20,7 +20,7 @@ public class Main_Hw6 {
     public static void main(String[] args) {
         String[][] schedule = new String[7][2];
         fill_schedule(schedule);
-        Human[] humans = new Human[1000000];
+        Human[] humans = new Human[100000000];
         for (int i = 0; i < humans.length; i++) {
             humans[i]= new Human();
         }
