@@ -1,6 +1,6 @@
 package homework6;
 
-import NewPack.homework6.*;
+import homeworksPack.homework6.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

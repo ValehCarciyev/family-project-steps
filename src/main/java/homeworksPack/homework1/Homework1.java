@@ -1,4 +1,4 @@
-package NewPack.homework1;
+package homeworksPack.homework1;
 
 import java.util.Arrays;
 import java.util.Scanner;

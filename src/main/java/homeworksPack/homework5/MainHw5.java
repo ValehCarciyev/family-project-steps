@@ -1,4 +1,4 @@
-package NewPack.Homework5;
+package homeworksPack.homework5;
 
 public class MainHw5 {
     public static void main(String[] args) {
@@ -18,6 +18,7 @@ public class MainHw5 {
         family.addChild(son);
         System.out.println(family.getMother().tostring());
         family.deleteChild(daught);
+        family.deleteChild(2);
         family.setPet(pet);
         System.out.println(family.getFather().tostring());
         System.out.println(family.toString());

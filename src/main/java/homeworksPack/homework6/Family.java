@@ -1,4 +1,4 @@
-package NewPack.homework6;
+package homeworksPack.homework6;
 
 public class Family {
     private Human mother;
@@ -69,27 +69,27 @@ public class Family {
                 '}';
     }
 
-    public static int findIndex(Human[] arr, Human human) {
+    public static boolean findIndex(Human[] arr, Human human) {
         if (arr == null) {
-            return -1;
+            return false;
         }
         int len = arr.length;
         int i = 0;
 
         while (i < len) {
             if (arr[i] == human) {
-                return i;
+                return true;
             }
             else {
                 i = i + 1;
             }
         }
-        return -1;
+        return false;
     }
 
     public void deleteChild(Human child) {
         Human[] curChilds = this.children;
-        if(findIndex(curChilds, child) != -1){
+        if(findIndex(curChilds, child)){
             Human[] newChilds = new Human[curChilds.length - 1];
             int j = 0;
             for (Human curChild : curChilds) {
@@ -138,7 +138,7 @@ public class Family {
     }
 
     @Override
-    protected void finalize() throws Throwable {
-        super.finalize();
+    public void finalize() {
+        System.out.println("Family in the finalizer");
     }
 }

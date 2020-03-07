@@ -1,4 +1,4 @@
-package NewPack.homework6;
+package homeworksPack.homework6;
 
 public class Main_Hw6 {
     private static void fill_schedule(String[][] schedule) {
@@ -20,6 +20,10 @@ public class Main_Hw6 {
     public static void main(String[] args) {
         String[][] schedule = new String[7][2];
         fill_schedule(schedule);
+        Human[] humans = new Human[1000000];
+        for (int i = 0; i < humans.length; i++) {
+            humans[i]= new Human();
+        }
         Human daught = new Human("Elizabeth","Nielsen",
                 2011,(short) 100,schedule);
         Human son = new Human("James","Nielsen",
@@ -29,6 +33,8 @@ public class Main_Hw6 {
 
         Family family = new Family(new Human("Eliza", "Nielsen", 1989, (short) 95, schedule),
                 new Human("John", "Nielsen", 1988, (short) 98, schedule));
+
+
 
         family.addChild(daught);
         family.addChild(son);

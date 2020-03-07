@@ -1,4 +1,4 @@
-package NewPack.homework6;
+package homeworksPack.homework5;
 
 import java.util.Arrays;
 import java.util.Objects;
@@ -126,8 +126,5 @@ public class Human {
         return result;
     }
 
-    @Override
-    protected void finalize() throws Throwable {
-        super.finalize();
-    }
 }
+

@@ -1,4 +1,4 @@
-package NewPack.Homework5;
+package homeworksPack.homework6;
 
 import java.util.Arrays;
 import java.util.Objects;
@@ -20,6 +20,10 @@ public class Human {
         this.year = year;
         this.iq = iq;
         this.schedule = schedule;
+    }
+
+    public Human() {
+
     }
 
     public Family getFamily() {
@@ -126,5 +130,8 @@ public class Human {
         return result;
     }
 
+    @Override
+    public void finalize() throws Throwable {
+        System.out.println("Human in the finalizer");
+    }
 }
-

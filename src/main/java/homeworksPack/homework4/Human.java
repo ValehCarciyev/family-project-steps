@@ -1,4 +1,4 @@
-package NewPack.Homework4;
+package homeworksPack.homework4;
 
 public class Human {
     String name;
@@ -38,10 +38,10 @@ public class Human {
     public Human() {
     }
 
-    public void GreetPet(){
+    public void greetPet(){
         System.out.println("Hello, " + pet.nickname);
     }
-    public void DescribePet(){
+    public void describePet(){
         System.out.printf("I have a %s, he is %d years old, he is", pet.species, pet.age);
         if(pet.trickLevel >= 50){
             System.out.print(" very sly\n");
@@ -51,9 +51,10 @@ public class Human {
         }
     }
 
-    public String tostring(){
+    @Override
+    public String toString(){
 
         return String.format("Human{name='%s', surname='%s', year=%d, iq=%s, mother=%s %s, father=%s %s, pet=%s}"
-                , name, surname, year, iq, mother.name, mother.surname, father.name, father.surname, pet.tostring());
+                , name, surname, year, iq, mother.name, mother.surname, father.name, father.surname, pet.toString());
     }
 }

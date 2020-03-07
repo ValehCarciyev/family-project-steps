@@ -1,4 +1,4 @@
-package NewPack.homework6;
+package homeworksPack.homework6;
 
 public enum Species {
     Cat,

@@ -1,4 +1,4 @@
-package NewPack.Homework5;
+package homeworksPack.homework5;
 
 public class Family {
 
@@ -78,6 +78,21 @@ public class Family {
             }
         }
         this.setChildren(newChildren);
+    }
+
+    public void deleteChild(int index) {
+        Human[] curChilds = this.children;
+        if(index < this.children.length && index >= 0){
+            Human[] newChilds = new Human[curChilds.length - 1];
+            int j = 0;
+            for (int i = 0; i < curChilds.length ; i++) {
+                if (i != index) {
+                    newChilds[j] = curChilds[i];
+                    j++;
+                }
+            }
+            this.setChildren(newChilds);
+        }
     }
 
     public void addChild(Human child) {

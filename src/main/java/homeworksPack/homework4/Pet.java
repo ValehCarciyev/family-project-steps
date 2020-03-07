@@ -1,4 +1,4 @@
-package NewPack.Homework4;
+package homeworksPack.homework4;
 
 import java.util.Arrays;
 
@@ -34,7 +34,7 @@ public class Pet {
         System.out.println("I need to cover it up");
     }
 
-    public String tostring(){
+    public String toString(){
         String string = "";
         string += String.format("%s{nickname='%s', age=%d, trickLevel=%s, habits=%s}"
                 , species, nickname, age, trickLevel, Arrays.toString(habits));

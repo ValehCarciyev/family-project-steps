@@ -1,4 +1,4 @@
-package NewPack.Homework5;
+package homeworksPack.homework5;
 
 import java.util.Arrays;
 import java.util.Objects;

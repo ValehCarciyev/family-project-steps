@@ -1,14 +1,14 @@
-package NewPack.Homework4;
+package homeworksPack.homework4;
 
 public class Main {
-    private static void CallAllMethods(Human child) {
-        child.GreetPet();
-        child.DescribePet();
-        System.out.println(child.tostring());
+    private static void callAllMethods(Human child) {
+        child.greetPet();
+        child.describePet();
+        System.out.println(child.toString());
         child.pet.eat();
         child.pet.respond();
         child.pet.foul();
-        System.out.println(child.pet.tostring());
+        System.out.println(child.pet.toString());
     }
     public static void main(String[] args) {
         Human father = new Human();
@@ -26,6 +26,6 @@ public class Main {
         child.father = father;
         child.mother = mother;
 
-        CallAllMethods(child);
+        callAllMethods(child);
     }
 }

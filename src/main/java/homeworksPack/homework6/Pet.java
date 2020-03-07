@@ -1,4 +1,4 @@
-package NewPack.homework6;
+package homeworksPack.homework6;
 
 import java.util.Arrays;
 import java.util.Objects;
@@ -67,8 +67,13 @@ public class Pet {
                 , species, nickname, age, trickLevel, Arrays.toString(habits));
     }
     @Override
-    protected void finalize() throws Throwable {
-        super.finalize();
+    public void finalize() {
+        System.out.println("Removing " + this.toString());
+        try {
+            super.finalize();
+        } catch (Throwable throwable) {
+            throwable.printStackTrace();
+        }
     }
     @Override
     public boolean equals(Object o) {
