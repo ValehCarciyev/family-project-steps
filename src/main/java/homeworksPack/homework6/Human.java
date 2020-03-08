@@ -102,7 +102,7 @@ public class Human {
         System.out.println("Hello, " + pet.getNickname());
     }
 
-    public String tostring(){
+    public String toString(){
         return String.format("Human{name='%s', surname='%s', year=%d, iq=%s, schedule=%s}"
                 , name, surname, year, iq, Arrays.deepToString(schedule));
     }

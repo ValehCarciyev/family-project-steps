@@ -16,11 +16,11 @@ public class MainHw5 {
 
         family.addChild(daught);
         family.addChild(son);
-        System.out.println(family.getMother().tostring());
+        System.out.println(family.getMother().toString());
         family.deleteChild(daught);
         family.deleteChild(2);
         family.setPet(pet);
-        System.out.println(family.getFather().tostring());
+        System.out.println(family.getFather().toString());
         System.out.println(family.toString());
     }
 }

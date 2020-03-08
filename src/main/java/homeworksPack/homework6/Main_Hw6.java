@@ -1,7 +1,7 @@
 package homeworksPack.homework6;
 
 public class Main_Hw6 {
-    private static void fill_schedule(String[][] schedule) {
+    private static void fillSchedule(String[][] schedule) {
         schedule[0][0] = DayOfWeek.Sunday.name();
         schedule[0][1] = "do home work.";
         schedule[1][0] = DayOfWeek.Monday.name();
@@ -19,7 +19,7 @@ public class Main_Hw6 {
     }
     public static void main(String[] args) {
         String[][] schedule = new String[7][2];
-        fill_schedule(schedule);
+        fillSchedule(schedule);
         Human[] humans = new Human[100000000];
         for (int i = 0; i < humans.length; i++) {
             humans[i]= new Human();

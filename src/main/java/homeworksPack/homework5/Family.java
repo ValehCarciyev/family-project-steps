@@ -58,13 +58,13 @@ public class Family {
     public String toString() {
         StringBuilder s = new StringBuilder();
         for (Human h: children) {
-            s.append(h.tostring());
+            s.append(h.toString());
         }
         return "Family{" +
-                "\nmother=" + mother.tostring() +
-                ",\n father=" + father.tostring() +
+                "\nmother=" + mother.toString() +
+                ",\n father=" + father.toString() +
                 ",\n children=" + s +
-                ",\n pet=" + pet.tostring() +
+                ",\n pet=" + pet.toString() +
                 '}';
     }
 

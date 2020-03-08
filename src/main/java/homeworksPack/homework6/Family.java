@@ -65,7 +65,7 @@ public class Family {
                 "\nmother=" + mother.tostring() +
                 ",\n father=" + father.tostring() +
                 ",\n children=" + s +
-                ",\n pet=" + pet.tostring() +
+                ",\n pet=" + pet.toString() +
                 '}';
     }
 
