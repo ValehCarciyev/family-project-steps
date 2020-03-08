@@ -10,4 +10,5 @@ public class Woman extends Human {
     public void greetPet(){
         System.out.println("Hello, woman's pet");
     }
+
 }

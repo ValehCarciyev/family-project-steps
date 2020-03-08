@@ -87,6 +87,7 @@ public class Family {
         return false;
     }
 
+
     public void deleteChild(Human child) {
         Human[] curChilds = this.children;
         if(findIndex(curChilds, child)){

@@ -32,7 +32,6 @@ public class MainHw7 {
         Human son = new Human("James","Nielsen",
                 2013, (short) 100,schedule);
 
-
         Family family = new Family(new Human("Eliza", "Nielsen", 1989, (short) 95, schedule),
                 new Human("John", "Nielsen", 1988, (short) 98, schedule));
 

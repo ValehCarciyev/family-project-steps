@@ -11,6 +11,7 @@ public class Dog extends Pet {
         setSpecies(Species.Dog);
     }
 
+
     @Override
     public void eat() {
         System.out.println("I like eating :)");

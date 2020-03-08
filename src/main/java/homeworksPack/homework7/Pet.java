@@ -72,6 +72,7 @@ public abstract class Pet {
         return String.format("%s{nickname='%s', age=%d, trickLevel=%s, habits=%s}"
                 , species, nickname, age, trickLevel, Arrays.toString(habits));
     }
+
     @Override
     public void finalize() {
         System.out.println("Removing " + this.toString());

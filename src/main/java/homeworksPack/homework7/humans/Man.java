@@ -11,4 +11,5 @@ public class Man extends Human {
     public void greetPet(){
         System.out.println("Hello, man's pet");
     }
+
 }

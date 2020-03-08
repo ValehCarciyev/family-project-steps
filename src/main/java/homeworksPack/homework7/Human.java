@@ -12,7 +12,6 @@ public class Human {
     private Human mother;
     private String[][] schedule;
     private Family family;
-
     public Human(String name, String surname, int year, short iq, String[][] schedule) {
         this.name = name;
         this.surname = surname;
@@ -123,7 +122,7 @@ public class Human {
     }
 
     @Override
-    public void finalize() throws Throwable {
+    public void finalize()  {
         System.out.println("Human in the finalizer");
     }
 }

@@ -14,6 +14,7 @@ public class DomesticCat extends Pet {
         System.out.println("What you want?");
     }
 
+
     @Override
     public void foul() {
         System.out.println("Miauuuuu!");
