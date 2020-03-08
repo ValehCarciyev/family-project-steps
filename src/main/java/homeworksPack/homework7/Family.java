@@ -1,4 +1,4 @@
-package homeworksPack.homework6;
+package homeworksPack.homework7;
 
 public class Family {
     private Human mother;

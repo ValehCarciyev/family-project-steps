@@ -1,4 +1,4 @@
-package homeworksPack.homework6;
+package homeworksPack.homework7;
 
 import java.util.Arrays;
 import java.util.Objects;
@@ -8,7 +8,6 @@ public class Human {
     private String surname;
     private int year;
     private short iq;
-    private Pet pet = new Pet();
     private Human father;
     private Human mother;
     private String[][] schedule;
@@ -50,9 +49,6 @@ public class Human {
         this.iq = iq;
     }
 
-    public void setPet(Pet pet) {
-        this.pet = pet;
-    }
 
     public void setFather(Human father) {
         this.father = father;
@@ -82,9 +78,6 @@ public class Human {
         return iq;
     }
 
-    public Pet getPet() {
-        return pet;
-    }
 
     public Human getFather() {
         return father;
@@ -98,8 +91,8 @@ public class Human {
         return schedule;
     }
 
-    public void greetPet(){
-        System.out.println("Hello, " + pet.getNickname());
+    public void GreetPet(){
+        System.out.println("Hello, my Pet");
     }
 
     public String toString(){
@@ -116,7 +109,6 @@ public class Human {
                 iq == human.iq &&
                 name.equals(human.name) &&
                 surname.equals(human.surname) &&
-                pet.equals(human.pet) &&
                 father.equals(human.father) &&
                 mother.equals(human.mother) &&
                 Arrays.equals(schedule, human.schedule) &&
@@ -125,7 +117,7 @@ public class Human {
 
     @Override
     public int hashCode() {
-        int result = Objects.hash(name, surname, year, iq, pet, father, mother, family);
+        int result = Objects.hash(name, surname, year, iq, father, mother, family);
         result = 31 * result + Arrays.hashCode(schedule);
         return result;
     }
