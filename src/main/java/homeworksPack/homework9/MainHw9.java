@@ -68,7 +68,7 @@ public class MainHw9 {
         System.out.println(familyController.getFamilyById(0));
         System.out.println(familyController.getPets(1));
         familyController.addPet(1, dog);
-        familyController.bornChild(family2, "Lisa", "Mac");
+        familyController.bornChild(family2, "Monica", "Nielsen");
         System.out.println(familyController.displayAllFamilies());
         System.out.println(familyController.getAllFamilies());
     }
