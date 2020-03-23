@@ -26,6 +26,11 @@ public class Human {
 
     }
 
+    public Human(String name, String surname) {
+        this.name = name;
+        this.surname = surname;
+    }
+
     public Family getFamily() {
         return family;
     }
@@ -131,7 +136,7 @@ public class Human {
     }
 
     @Override
-    public void finalize() throws Throwable {
+    public void finalize() {
         System.out.println("Human in the finalizer");
     }
 }
