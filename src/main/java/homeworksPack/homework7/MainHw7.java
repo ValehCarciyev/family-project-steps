@@ -2,6 +2,10 @@ package homeworksPack.homework7;
 
 import homeworksPack.homework7.animals.Dog;
 
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashSet;
+
 public class MainHw7 {
 
     private static void fill_schedule(String[][] schedule) {
@@ -35,11 +39,11 @@ public class MainHw7 {
         Family family = new Family(new Human("Eliza", "Nielsen", 1989, (short) 95, schedule),
                 new Human("John", "Nielsen", 1988, (short) 98, schedule));
 
-        Dog dog = new Dog("Bob", 15, (short) 50, new String[]{"eat", "drink", "sleep"});
+        Dog dog = new Dog("Bob", 15, (short) 50, new HashSet<>(Arrays.asList("eat","drink","sleep")));
 
         family.addChild(daught);
         family.addChild(son);
-        family.setPet(dog);
+        family.setPet(Collections.singleton(dog));
 
         family.deleteChild(daught);
         System.out.println(family.countFamily());

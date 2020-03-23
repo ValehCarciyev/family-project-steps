@@ -3,10 +3,12 @@ package homeworksPack.homework7.animals;
 import homeworksPack.homework7.Pet;
 import homeworksPack.homework7.Species;
 
+import java.util.Set;
+
 public class Dog extends Pet {
     Species spec = Species.Dog;
 
-    public Dog(String nickname, int age, int trickLevel, String[] habits) {
+    public Dog(String nickname, int age, int trickLevel, Set<String> habits) {
         super(nickname, age, (short) trickLevel, habits);
         setSpecies(Species.Dog);
     }

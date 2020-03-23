@@ -1,16 +1,16 @@
 package homeworksPack.homework7;
 
-import java.util.Arrays;
 import java.util.Objects;
+import java.util.Set;
 
 public abstract class Pet {
     private Species species;
     private String nickname;
     private int age;
     private short trickLevel;
-    private String[] habits;
+    private Set<String> habits;
 
-    public Pet(String nickname, int age, short trickLevel, String[] habits){
+    public Pet(String nickname, int age, short trickLevel, Set<String> habits){
         this.species = Species.Unknown;
         this.nickname = nickname;
         this.age = age;
@@ -34,7 +34,7 @@ public abstract class Pet {
         this.trickLevel = trickLevel;
     }
 
-    public void setHabits(String[] habits) {
+    public void setHabits(Set<String> habits) {
         this.habits = habits;
     }
 
@@ -54,23 +54,21 @@ public abstract class Pet {
         return trickLevel;
     }
 
-    public String[] getHabits() {
+    public Set<String> getHabits() {
         return habits;
     }
 
     public void eat(){
         System.out.println("I am eating!");
     }
-    public void respond(){
-        System.out.println("Hello owner, I am " + nickname + ". I miss you!");
-    }
+    public abstract void respond();
     public void foul(){
         System.out.println("I need to cover it up");
     }
 
     public String toString(){
         return String.format("%s{nickname='%s', age=%d, trickLevel=%s, habits=%s}"
-                , species, nickname, age, trickLevel, Arrays.toString(habits));
+                , species, nickname, age, trickLevel, habits.toString());
     }
 
     @Override
@@ -91,13 +89,13 @@ public abstract class Pet {
                 trickLevel == pet.trickLevel &&
                 species.equals(pet.species) &&
                 nickname.equals(pet.nickname) &&
-                Arrays.equals(habits, pet.habits);
+                habits.equals(pet.habits);
     }
 
     @Override
     public int hashCode() {
         int result = Objects.hash(species, nickname, age, trickLevel);
-        result = 31 * result + Arrays.hashCode(habits);
+        result = 31 * result + habits.hashCode();
         return result;
     }
 }

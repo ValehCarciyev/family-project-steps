@@ -1,10 +1,12 @@
 package homeworksPack.homework7;
 
+import java.util.Set;
+
 public class Family {
     private Human mother;
     private Human father;
     private Human[] children = new Human[0];
-    private Pet pet;
+    private Set<Pet> pet;
 
     public Family(Human mother, Human father) {
         this.mother = mother;
@@ -39,11 +41,11 @@ public class Family {
         this.children = children;
     }
 
-    public Pet getPet() {
+    public Set<Pet>  getPet() {
         return pet;
     }
 
-    public void setPet(Pet pet) {
+    public void setPet(Set<Pet> pet) {
         this.pet = pet;
     }
 
@@ -77,7 +79,7 @@ public class Family {
         int i = 0;
 
         while (i < len) {
-            if (arr[i] == human) {
+            if (arr[i].equals(human)) {
                 return true;
             }
             else {

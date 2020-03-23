@@ -73,25 +73,6 @@ public class Family {
                 '}';
     }
 
-    public static boolean findIndex(List arr, Human human) {
-        if (arr == null) {
-            return false;
-        }
-        int len = arr.size();
-        int i = 0;
-
-        while (i < len) {
-            if (arr.get(i) == human) {
-                return true;
-            }
-            else {
-                i = i + 1;
-            }
-        }
-        return false;
-    }
-
-
     public void deleteChild(Human child) {
         children.remove(child);
         this.setChildren(children);
