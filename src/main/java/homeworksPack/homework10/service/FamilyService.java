@@ -1,12 +1,12 @@
-package homeworksPack.homework9.service;
+package homeworksPack.homework10.service;
 
-import homeworksPack.homework9.humans.Family;
-import homeworksPack.homework9.animals.Pet;
-import homeworksPack.homework9.dao.CollectionFamilyDao;
-import homeworksPack.homework9.dao.FamilyDao;
-import homeworksPack.homework9.humans.Human;
-import homeworksPack.homework9.humans.Man;
-import homeworksPack.homework9.humans.Woman;
+import homeworksPack.homework10.animals.Pet;
+import homeworksPack.homework10.dao.CollectionFamilyDao;
+import homeworksPack.homework10.dao.FamilyDao;
+import homeworksPack.homework10.humans.Family;
+import homeworksPack.homework10.humans.Human;
+import homeworksPack.homework10.humans.Man;
+import homeworksPack.homework10.humans.Woman;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -86,8 +86,8 @@ public class FamilyService {
 
     public void deleteAllChildrenOlderThen(int age) {
         for (Family f : fam) {
-            int year = LocalDate.now().getYear();
-            f.getChildren().removeIf(c -> age < (year-c.getyear()));
+            int birthdate = LocalDate.now().getYear();
+            f.getChildren().removeIf(c -> age < (birthdate-c.getbirthdate()));
         }
     }
 

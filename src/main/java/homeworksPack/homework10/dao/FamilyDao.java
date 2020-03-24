@@ -1,6 +1,6 @@
-package homeworksPack.homework9.dao;
+package homeworksPack.homework10.dao;
 
-import homeworksPack.homework9.humans.Family;
+import homeworksPack.homework10.humans.Family;
 
 import java.util.List;
 

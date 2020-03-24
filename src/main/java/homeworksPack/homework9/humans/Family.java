@@ -1,8 +1,9 @@
-package homeworksPack.homework9;
+package homeworksPack.homework9.humans;
 
 import homeworksPack.homework9.humans.Human;
 import homeworksPack.homework9.humans.Man;
 import homeworksPack.homework9.humans.Woman;
+import homeworksPack.homework9.animals.Pet;
 
 import java.util.HashSet;
 import java.util.List;

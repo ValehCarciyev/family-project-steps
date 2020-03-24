@@ -38,7 +38,7 @@ public class Human {
         this.surname = surname;
     }
 
-    public void setYear(int year) {
+    public void setyear(int year) {
         this.year = year;
     }
 
@@ -70,7 +70,7 @@ public class Human {
         return surname;
     }
 
-    public int getYear() {
+    public int getyear() {
         return year;
     }
 

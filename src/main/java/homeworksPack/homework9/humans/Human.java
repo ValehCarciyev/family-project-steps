@@ -40,8 +40,8 @@ public class Human {
     public void setName(String name) { this.name = name; }
     public String getSurname() { return surname; }
     public void setSurname(String surname) { this.surname = surname; }
-    public int getYear() { return year; }
-    public void setYear(int year) { this.year = year; }
+    public int getyear() { return year; }
+    public void setyear(int year) { this.year = year; }
     public Map<DaysOfWeek,String> getSchedule() { return schedule; }
     public void setSchedule(Map<DaysOfWeek,String> schedule) { this.schedule = schedule; }
 

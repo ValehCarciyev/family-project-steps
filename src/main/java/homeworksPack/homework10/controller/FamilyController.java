@@ -1,11 +1,11 @@
-package homeworksPack.homework9.controller;
+package homeworksPack.homework10.controller;
 
-import homeworksPack.homework9.humans.Human;
-import homeworksPack.homework9.humans.Man;
-import homeworksPack.homework9.humans.Woman;
-import homeworksPack.homework9.service.FamilyService;
-import homeworksPack.homework9.animals.Pet;
-import homeworksPack.homework9.humans.Family;
+import homeworksPack.homework10.animals.Pet;
+import homeworksPack.homework10.humans.Family;
+import homeworksPack.homework10.humans.Human;
+import homeworksPack.homework10.humans.Man;
+import homeworksPack.homework10.humans.Woman;
+import homeworksPack.homework10.service.FamilyService;
 
 import java.util.HashSet;
 import java.util.List;

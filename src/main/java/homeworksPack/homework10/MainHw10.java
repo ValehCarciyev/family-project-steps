@@ -1,18 +1,18 @@
-package homeworksPack.homework9;
+package homeworksPack.homework10;
 
-import homeworksPack.homework9.animals.Dog;
-import homeworksPack.homework9.animals.DomesticCat;
-import homeworksPack.homework9.animals.Pet;
-import homeworksPack.homework9.controller.FamilyController;
-import homeworksPack.homework9.enums.DaysOfWeek;
-import homeworksPack.homework9.humans.Family;
-import homeworksPack.homework9.humans.Human;
-import homeworksPack.homework9.humans.Man;
-import homeworksPack.homework9.humans.Woman;
+import homeworksPack.homework10.animals.Dog;
+import homeworksPack.homework10.animals.DomesticCat;
+import homeworksPack.homework10.animals.Pet;
+import homeworksPack.homework10.controller.FamilyController;
+import homeworksPack.homework10.enums.DaysOfWeek;
+import homeworksPack.homework10.humans.Family;
+import homeworksPack.homework10.humans.Human;
+import homeworksPack.homework10.humans.Man;
+import homeworksPack.homework10.humans.Woman;
 
 import java.util.*;
 
-public class MainHw9 {
+public class MainHw10 {
     public static void main(String[] args) {
         Map<DaysOfWeek, String> schedule = new HashMap<>();
         fillSchedule(schedule);
@@ -26,15 +26,15 @@ public class MainHw9 {
         habits2.add("jump");
         habits2.add("sleep");
 
-        Human human = new Human("Human_Name", "Human_Surame", 1, 1, schedule);
+        Human human = new Human("Human_Name", "Human_Surame", "01/07/1970", 1, schedule);
 
         Dog dog = new Dog("Beethoven", 5, 75, habits1);
         Woman woman1 = new Woman("Eliza", "Martin");
         Man man1 = new Man("John", "Martin");
         List<Human> children1 = new ArrayList<>();
         HashSet<Pet> pets1 = new HashSet<>();
-        Human child1 = new Human("Kyle", "Nielson", 19777, 90);
-        Human child2 = new Human("Mike", "Nielson", 1979, 91);
+        Human child1 = new Human("Kyle", "Nielson", "01/05/2000", 90);
+        Human child2 = new Human("Mike", "Nielson", "19/12/2002", 91);
 
         Family family1 = new Family(woman1, man1, children1, pets1);
         pets1.add(dog);
@@ -44,11 +44,11 @@ public class MainHw9 {
         Man man2 = new Man("Trump", "Nielson");
         List<Human> children2 = new ArrayList<>();
         HashSet<Pet> pets2 = new HashSet<>();
-        Human child4 = new Human("Human", "Humans", 1977, 90);
+        Human child4 = new Human("Human", "Humans", "05/05/2004", 90);
         Family family2 = new Family(woman2, man2, children2, pets2);
         pets2.add(cat);
 
-        Human child6 = new Human("Mikkkkkkee", "Kaaaarleoneeeeee", 1979, 91);
+        Human child6 = new Human("Mikkkkkkee", "Kaaaarleoneeeeee", "12/04/1976", 91);
 
         FamilyController familyController = new FamilyController();
         familyController.familyService.famDao.saveFamily(family1);
@@ -60,19 +60,10 @@ public class MainHw9 {
         family2.addChild(child4);
         family2.deleteChild(0);
 
-        System.out.println(familyController.getFamiliesBiggerThan(3));
-        System.out.println(familyController.getFamiliesLessThan(6));
-        System.out.println(familyController.countFamiliesWithMemberNumber(3));
-        System.out.println(familyController.count());
-        familyController.adoptChild(family2, child6);
-        System.out.println(familyController.displayAllFamilies());
-        familyController.deleteAllChildrenOlderThen(20);
-        System.out.println(familyController.getFamilyById(0));
-        System.out.println(familyController.getPets(1));
-        familyController.addPet(1, dog);
         familyController.bornChild(family2, "Monica", "Nielsen");
-        System.out.println(familyController.displayAllFamilies());
-        System.out.println(familyController.getAllFamilies());
+
+        System.out.println(human.describeAge());
+        System.out.println(human.toString());
     }
 
     private static void fillSchedule(Map<DaysOfWeek, String> schedule) {

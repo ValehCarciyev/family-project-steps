@@ -1,4 +1,4 @@
-package homeworksPack.homework9;
+package homeworksPack.homework10.animals;
 
 import java.util.Set;
 
