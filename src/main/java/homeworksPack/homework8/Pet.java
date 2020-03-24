@@ -7,9 +7,9 @@ public abstract class Pet {
     private String nickname;
     private int age;
     private short trickLevel;
-    private Set habits;
+    private Set<String> habits;
 
-    public Pet(String nickname, int age, short trickLevel, Set habits){
+    public Pet(String nickname, int age, short trickLevel, Set<String> habits){
         this.species = Species.Unknown;
         this.nickname = nickname;
         this.age = age;
@@ -33,7 +33,7 @@ public abstract class Pet {
         this.trickLevel = trickLevel;
     }
 
-    public void setHabits(Set habits) {
+    public void setHabits(Set<String> habits) {
         this.habits = habits;
     }
 
@@ -53,7 +53,7 @@ public abstract class Pet {
         return trickLevel;
     }
 
-    public Set getHabits() {
+    public Set<String> getHabits() {
         return habits;
     }
 

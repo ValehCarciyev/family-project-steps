@@ -5,7 +5,7 @@ import homeworksPack.homework9.humans.Family;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CollectionFamilyDao implements FamilyDao {
+public class CollectionFamilyDao implements FamilyDao<Family> {
     List<Family> familyList = new ArrayList<>();
 
     @Override

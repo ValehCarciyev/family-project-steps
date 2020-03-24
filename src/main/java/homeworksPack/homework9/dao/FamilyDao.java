@@ -1,10 +1,8 @@
 package homeworksPack.homework9.dao;
 
-import homeworksPack.homework9.humans.Family;
-
 import java.util.List;
 
-public interface FamilyDao {
+public interface FamilyDao<Family> {
     List<Family> getAllFamilies();
     Family getFamilyByIndex(int index);
     boolean deleteFamily(int index);

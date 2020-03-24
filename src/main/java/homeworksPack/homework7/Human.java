@@ -8,8 +8,6 @@ public class Human {
     private String surname;
     private int year;
     private short iq;
-    private Human father;
-    private Human mother;
     private String[][] schedule;
     private Family family;
     public Human(String name, String surname, int year, short iq, String[][] schedule) {
@@ -48,15 +46,6 @@ public class Human {
         this.iq = iq;
     }
 
-
-    public void setFather(Human father) {
-        this.father = father;
-    }
-
-    public void setMother(Human mother) {
-        this.mother = mother;
-    }
-
     public void setSchedule(String[][] schedule) {
         this.schedule = schedule;
     }
@@ -77,14 +66,6 @@ public class Human {
         return iq;
     }
 
-
-    public Human getFather() {
-        return father;
-    }
-
-    public Human getMother() {
-        return mother;
-    }
 
     public String[][] getSchedule() {
         return schedule;
@@ -108,15 +89,13 @@ public class Human {
                 iq == human.iq &&
                 name.equals(human.name) &&
                 surname.equals(human.surname) &&
-                father.equals(human.father) &&
-                mother.equals(human.mother) &&
                 Arrays.equals(schedule, human.schedule) &&
                 family.equals(human.family);
     }
 
     @Override
     public int hashCode() {
-        int result = Objects.hash(name, surname, year, iq, father, mother, family);
+        int result = Objects.hash(name, surname, year, iq, family);
         result = 31 * result + Arrays.hashCode(schedule);
         return result;
     }

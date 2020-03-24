@@ -68,7 +68,6 @@ public class FamilyService {
             child.setSurname(family.getMan().getSurname());
         if (family != null)
             family.addChild(child);
-        familyDao.saveFamily(family);
         return family;
     }
 
@@ -76,7 +75,6 @@ public class FamilyService {
         familyList.forEach(f -> {
             int year = LocalDate.now().getYear();
             f.getChildren().removeIf(c -> age < (year - c.getbirthdate()));
-            familyDao.saveFamily(f);
         });
     }
 

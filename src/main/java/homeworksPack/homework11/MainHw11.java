@@ -64,6 +64,10 @@ public class MainHw11 {
 
         System.out.println(human.describeAge());
         System.out.println(human.toString());
+
+        System.out.println(family1.toString());
+        familyController.adoptChild(family1,child1);
+        System.out.println(family1.toString());
     }
 
     private static void fillSchedule(Map<DaysOfWeek, String> schedule) {

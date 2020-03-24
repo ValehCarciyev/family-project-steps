@@ -14,7 +14,7 @@ import java.util.HashSet;
 import java.util.List;
 
 public class FamilyService {
-    public FamilyDao famDao = new CollectionFamilyDao();
+    public FamilyDao<Family> famDao = new CollectionFamilyDao();
     public List<Family> fam = famDao.getAllFamilies();
 
     public List<Family> getAllFamilies() {

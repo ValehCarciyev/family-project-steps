@@ -1,7 +1,7 @@
 package homework9;
 
-import homeworksPack.homework9.Family;
-import homeworksPack.homework9.Pet;
+import homeworksPack.homework9.humans.Family;
+import homeworksPack.homework9.animals.Pet;
 import homeworksPack.homework9.animals.Dog;
 import homeworksPack.homework9.animals.DomesticCat;
 import homeworksPack.homework9.humans.Human;
