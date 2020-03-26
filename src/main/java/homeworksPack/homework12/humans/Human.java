@@ -1,11 +1,14 @@
-package homeworksPack.homework10.humans;
+package homeworksPack.homework12.humans;
 
-import homeworksPack.homework10.enums.DaysOfWeek;
-import homeworksPack.homework10.enums.Species;
+import homeworksPack.homework12.enums.DaysOfWeek;
+import homeworksPack.homework12.enums.Species;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.time.*;
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.Period;
+import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.Map;
@@ -70,12 +73,26 @@ public class Human {
 
     public Human() { }
 
+    public long getBirthdate() {
+        return birthdate;
+    }
+
+    public void setBirthdate(long birthdate) {
+        this.birthdate = birthdate;
+    }
+
+    public int getIQ() {
+        return IQ;
+    }
+
+    public void setIQ(int IQ) {
+        this.IQ = IQ;
+    }
+
     public String getName() { return name; }
     public void setName(String name) { this.name = name; }
     public String getSurname() { return surname; }
     public void setSurname(String surname) { this.surname = surname; }
-    public long getbirthdate() { return birthdate; }
-    public void setbirthdate(int birthdate) { this.birthdate = birthdate; }
     public Map<DaysOfWeek,String> getSchedule() { return schedule; }
     public void setSchedule(Map<DaysOfWeek,String> schedule) { this.schedule = schedule; }
 
@@ -96,7 +113,9 @@ public class Human {
     }
 
     public String describeAge() {
-        return Instant.ofEpochMilli(birthdate).atZone(ZoneId.systemDefault()).toLocalDate().toString();
+        return "Years: " + Period.between(getAge(), LocalDate.now()).getYears() +
+                ", month: " + Period.between(getAge(), LocalDate.now()).getMonths() +
+                ", days: " + Period.between(getAge(), LocalDate.now()).getDays();
     }
 
     @Override
@@ -112,5 +131,17 @@ public class Human {
                 ", year of birth: " + DateTimeFormatter.ofPattern("dd/MM/YYYY").format(getAge()) +
                 ", schedule=" + getSchedule() +
                 '}';
+    }
+
+    public String prettyFormat(){
+
+        return "{" +
+                "name='" + getName() + '\'' +
+                ", surname='" + getSurname() + '\'' +
+                ", birthDate=" + DateTimeFormatter.ofPattern("dd/MM/yyyy").format(getAge()) +
+                ", iq="+getIQ()+
+                ", schedule=" + getSchedule() +
+                '}';
+
     }
 }
