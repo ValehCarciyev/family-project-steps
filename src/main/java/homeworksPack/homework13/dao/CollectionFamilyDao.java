@@ -1,5 +1,6 @@
 package homeworksPack.homework13.dao;
 
+import homeworksPack.homework13.FamilyOverflowException;
 import homeworksPack.homework13.animals.Dog;
 import homeworksPack.homework13.animals.Pet;
 import homeworksPack.homework13.humans.Human;
@@ -30,8 +31,7 @@ public class CollectionFamilyDao implements FamilyDao {
 
         }
         catch (IndexOutOfBoundsException | NullPointerException e ){
-            System.out.println("Wrong Index");
-            return null;
+            throw new FamilyOverflowException("Wrong Index");
         }
     }
 
@@ -57,7 +57,6 @@ public class CollectionFamilyDao implements FamilyDao {
     public void loadData() {
         File file=new File("src/main/java/homeworksPack/homework13/data/dataFile.txt");
         try {
-            new BufferedReader(new FileReader(file)).lines().collect(Collectors.toList());
             BufferedWriter bw = new BufferedWriter(new FileWriter(file));
             for (Family family : familyList) {
                 bw.write(family.showFamily());
@@ -65,7 +64,7 @@ public class CollectionFamilyDao implements FamilyDao {
             }
             bw.close();
         } catch (IOException e) {
-            System.out.printf("File:'%s' not found!\n", file);
+            throw new FamilyOverflowException(String.format("File:'%s' not found!\n", file));}
             try {
                 BufferedWriter bw = new BufferedWriter(new FileWriter(file));
                 for (Family family : familyList) {
@@ -74,9 +73,9 @@ public class CollectionFamilyDao implements FamilyDao {
                 }
                 bw.close();
             } catch (Exception e1) {
-                System.out.println("Error");
+                throw new FamilyOverflowException("Error");
             }
-        }
+
 
     }
 
